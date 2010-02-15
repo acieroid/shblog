@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASEDIR=$HOME/blog
+BASEDIR=$HOME/shblog
 . $BASEDIR/lib/includes.sh
 
 mkdir -p $TODAYDIR

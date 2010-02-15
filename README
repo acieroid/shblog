@@ -1,2 +1,6 @@
 shblog by AddiKT1ve <the.addikt1ve@gmail.com>
 shblog is distributed under the terms of the GPL v3.
+
+You have to use CGI with your httpd to display shblog output (index.sh).
+You should set $DATADIR as a darcs repository. I wrote a push.sh script which
+enables you to push new posts and/or modifications easily.
