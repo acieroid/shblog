@@ -9,6 +9,7 @@ THEMEDIR=$STATICDIR/theme
 
 # post.sh
 TODAYDIR=$DATADIR/`date +%Y`/`date +%m`/`date +%d`
+if [ -z $POSTNAME ]; then POSTNAME=post; fi
 TODAYPOST=$TODAYDIR/`date +%H%M%S`-$POSTNAME.shpost
 EDITOR=vim
 
