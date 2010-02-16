@@ -1,0 +1,41 @@
+body {
+	width: 85%;
+	margin: auto;
+	padding: 0;
+	background: #f1f1f1;
+	color: #4b4b4b;
+	font-family: "DejaVu Sans", Arial, sans-serif;
+	font-size: 0.8em;
+	}
+
+hr { display: none; }
+
+#header {
+	margin-bottom: 1em;
+	}
+
+.post {
+	margin-bottom: 2em;
+	padding: 1em;
+	background: #e5e5e5;
+	border: 1px solid #e0e0e0;
+	}
+
+.post-tags {
+	padding-bottom: 1em;
+	font-size: 0.8em;
+	border-bottom: 1px solid #cdcdcd;
+	}
+
+.post-content {
+	margin-top: 2em;
+	}
+
+.post-content a {
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+.post-content a:hover {
+	color: #1b1b1b;
+	}

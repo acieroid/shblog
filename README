@@ -1,6 +1,10 @@
 shblog by AddiKT1ve <the.addikt1ve@gmail.com>
 shblog is distributed under the terms of the GPL v3.
 
-You have to use CGI with your httpd to display shblog output (index.sh).
-You should set $DATADIR as a darcs repository. I wrote a push.sh script which
-enables you to push new posts and/or modifications easily.
+You may use CGI with your httpd to display shblog output (index.sh).
+You may also use gen.sh to create a static/index.html file; thus you just have
+to $ ln -s $BASEDIR/static /var/www/shblog and your blog should be available
+at http://localhost/shblog/
+
+You should initialize $DATADIR as a darcs repository, so that you can publish
+posts from any computer. Use cron with daemon.sh to refresh the "cache".

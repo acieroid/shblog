@@ -3,6 +3,10 @@
 # You shouldn't modify that
 DATADIR=$BASEDIR/data
 STATICDIR=$BASEDIR/static
+THEMEDIR=$STATICDIR/theme
+STYLEDIR=$THEMEDIR
+
+# post.sh
 TODAYDIR=$DATADIR/`date +%Y`/`date +%m`/`date +%d`
 TODAYPOST=$TODAYDIR/`date +%H%M%S`-$1.txt
 
