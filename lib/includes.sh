@@ -6,7 +6,6 @@ LIBDIR=$BASEDIR/lib
 DATADIR=$BASEDIR/data
 STATICDIR=$BASEDIR/static
 THEMEDIR=$STATICDIR/theme
-STYLEDIR=$THEMEDIR
 
 # post.sh
 TODAYDIR=$DATADIR/`date +%Y`/`date +%m`/`date +%d`

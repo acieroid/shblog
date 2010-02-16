@@ -2,8 +2,8 @@
 
 . $BASEDIR/lib/includes.sh
 
-mkdir -p $TODAYDIR
-cp $BASEDIR/lib/0.default $TODAYPOST
+[ -e $TODAYDIR ] || mkdir -p $TODAYDIR
+cp $LIBDIR/0.default $TODAYPOST
 
 while [ "$EDIT" != "y" -a "$EDIT" != "n"  ]; do
 	read -p "Do you want to edit your post? [y/n] " EDIT

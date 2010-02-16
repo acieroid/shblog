@@ -16,7 +16,7 @@ echo "		<link rel="stylesheet" type="text/css" href="theme/style.css" media="scr
 echo "	</head>"
 echo "	<body>"
 echo "		<h1 id="header">$BLOGTITLE</h1>"
-for article in $(find $DATADIR/ -name *.shpost); do
+for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
 	echo "		<div class="post">"
 	echo "			<h2 class="post-title">$(get_title)</h2>"
 	echo "			<p class="post-tags">Tags : $(get_tags_tab)</p>"
