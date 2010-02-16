@@ -8,6 +8,19 @@ function get_tags {
 	cat $article | grep ^tags:: | sed s/tags:://
 }
 
+function get_tags_tab {
+	x=1
+	y=1
+	nbr=`get_tags | wc -w`
+	while [ "$y" -le "$nbr" ]; do
+		tag=`get_tags | cut -d, -f $x`
+		tab[$x]=$tag
+		x=$(($x+1))
+		y="$x"
+	done
+	echo ${tab[*]} | sed s/" "/", "/g 
+}
+
 # Displays the post without its headers
 function get_post {
 	cat $article | sed "1,3d"

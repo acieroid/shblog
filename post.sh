@@ -17,3 +17,5 @@ while [ "$EDIT" != "y" -a "$EDIT" != "n"  ]; do
 			;;
 	esac
 done
+
+$BASEDIR/index.sh > $STATICDIR/index.html
