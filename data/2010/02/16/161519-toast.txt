@@ -1,0 +1,4 @@
+title::Un simple test
+tags::test, toast, shblog
+
+On sait jamais :-)
