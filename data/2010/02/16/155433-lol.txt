@@ -1,4 +1,0 @@
-title::Toast
-tags::toast
-
-mdr <a href="http://pouet.com">lol</a>

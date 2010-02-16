@@ -1,5 +1,0 @@
-title::Mon premier billet
-tags::pouet, premier, billet, blog
-
-Mon premier billet, bienvenue à tous :-)
-Allez tous mourir !
