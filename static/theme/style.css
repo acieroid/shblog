@@ -1,3 +1,6 @@
+/* shblog default theme by AddiKT1ve */
+
+/* Global layout */
 body {
 	width: 85%;
 	margin: auto;
@@ -10,10 +13,12 @@ body {
 
 hr { display: none; }
 
+/* Header */
 #header {
 	margin-bottom: 1em;
 	}
 
+/* Post display */
 .post {
 	margin-bottom: 2em;
 	padding: 1em;
@@ -38,4 +43,16 @@ hr { display: none; }
 
 .post-content a:hover {
 	color: #1b1b1b;
+	}
+
+/* Footer */
+#footer {
+	padding-top: 2em;
+	color: #afafaf;
+	text-align: right;
+	}
+
+#footer a {
+	color: #abbaff;
+	text-decoration: none;
 	}

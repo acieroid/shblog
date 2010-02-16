@@ -7,4 +7,14 @@ to $ ln -s $BASEDIR/static /var/www/shblog and your blog should be available
 at http://localhost/shblog/
 
 You should initialize $DATADIR as a darcs repository, so that you can publish
-posts from any computer. Use cron with daemon.sh to refresh the "cache".
+posts from any computer. See cron.example (included) to refresh the "cache".
+You can use ./shblog post to create a new post; you can create it from scratch
+too, respecting the usual tree:
+
+$DATADIR
+└── YYYY
+    └── MM
+        └── DD
+            └── HHMMSS-title.shpost
+
+Enjoy using shblog :-)
