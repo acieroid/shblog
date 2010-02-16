@@ -22,8 +22,9 @@ for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
 	echo "			<div class="post">"
 	echo "				<h2 class="post-title">$(get_title)</h2>"
 	if [ -n "`get_tags`" ]; then
-		echo "				<p class="post-tags">Tags : $(get_tags_tab)</p>"
+		echo "				<span class="post-tags">Tags : $(get_tags_tab)</span>"
 	fi
+	echo "				<span class="post-author">by $(get_post_author)</span>"
 	echo "				<div class="post-content">$(get_post)</div>"
 	echo "				<hr />"
 	echo "			</div>"

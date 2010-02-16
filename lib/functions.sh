@@ -21,7 +21,12 @@ function get_tags_tab {
 	echo ${tab[*]} | sed s/" "/", "/g 
 }
 
+# Works out post author
+function get_post_author {
+	cat $article | grep ^author:: | sed s/author:://
+}
+
 # Displays the post without its headers
 function get_post {
-	cat $article | sed "1,3d"
+	cat $article | sed "1,4d"
 }
