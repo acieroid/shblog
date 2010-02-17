@@ -10,7 +10,8 @@ TMPDIR=$BASEDIR/tmp
 LASTDU=$TMPDIR/lastdu
 
 # www dir
-WWWDIR=/var/www/shblog
+WWWBASE=/var/www
+WWWDIR=shblog
 
 # Settings
 . $LIBDIR/settings.sh
