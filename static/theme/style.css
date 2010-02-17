@@ -36,9 +36,16 @@ hr { display: none; }
 	font-size: 1.1em;
 	}
 
+/* Sidebar */
+#sidebar {
+	float: right;
+	width: 13em;
+	margin-top: 4em;
+	}
+
 /* Content */
 #content {
-	margin-top: 3em;
+	margin: 3em 15em 0 0;
 	}
 
 /* Post display */

@@ -52,3 +52,7 @@ function gen_post_html {
 	mkdir -p $STATICDIR/`dirname $article | sed s_"$DATADIR/"__`
 	$BINDIR/single.sh "`get_title`" "`get_tags_tab`" "`get_author`" "`get_post`" > `get_post_static_path`
 }
+
+function enable_mod {
+	. $MODDIR/$1.sh
+}

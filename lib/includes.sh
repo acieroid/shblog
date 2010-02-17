@@ -7,6 +7,7 @@ DATADIR=$BASEDIR/data
 STATICDIR=$BASEDIR/static
 THEMEDIR=$STATICDIR/theme
 TMPDIR=$BASEDIR/tmp
+MODDIR=$LIBDIR/modules
 LASTDU=$TMPDIR/lastdu
 
 # www dir
@@ -21,5 +22,8 @@ TODAYDIR=$DATADIR/`date +%Y`/`date +%m`/`date +%d`
 if [ -z $POSTNAME ]; then POSTNAME=post; fi
 TODAYPOST=$TODAYDIR/`date +%H%M%S`-$POSTNAME.shpost
 
-# Let's include functions eventually!
+# Functions
 . $LIBDIR/functions.sh
+
+# Module
+. $MODDIR/*.sh

@@ -17,6 +17,9 @@ echo "	</head>"
 echo "	<body>"
 echo "		<h1 id="header"><a href="/$WWWDIR/index.html">$BLOGTITLE</a></h1>"
 echo "		<span id="desc">$BLOGDESC</span>"
+echo "		<div id="sidebar">"
+enable_mod latest
+echo "		</div>"
 echo "		<div id="content">"
 for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
 	echo "			<div class="post">"
