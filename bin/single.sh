@@ -7,6 +7,9 @@ POSTTAGS="$2"
 POSTAUTHOR="$3"
 POSTCONTENT="$4"
 
+enable_mod latest
+enable_mod rss
+
 echo "<!DOCTYPE html>"
 echo "<html lang="fr">"
 echo "  <head>"
@@ -20,7 +23,7 @@ echo "  <body>"
 echo "          <h1 id="header"><a href="/$WWWDIR/index.html">$BLOGTITLE</a></h1>"
 echo "          <span id="desc">$BLOGDESC</span>"
 echo "		<div id="sidebar">"
-		enable_mod latest
+		display_latest_posts
 echo "		</div>"
 echo "          <div id="content">"
 echo "			<div class="post">"

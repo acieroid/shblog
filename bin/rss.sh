@@ -2,8 +2,8 @@
 
 . $BASEDIR/lib/includes.sh
 
-echo "<?xml version="1.0" encoding="utf-8"?>"
-echo "<rss version="2.0">"
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+echo "<rss version=\"2.0\">"
 echo "	<channel>"
 echo "		<title>$BLOGTITLE</title>"
 echo "		<link>$BLOGURL</link>"
