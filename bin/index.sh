@@ -13,12 +13,14 @@ echo "		<meta charset="utf-8">"
 echo "		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />"
 echo "		<title>$BLOGTITLE</title>"
 echo "		<link rel="stylesheet" type="text/css" href=/$WWWDIR/theme/style.css media="screen" />"
+enable_mod rss
+echo "		<link rel="alternate" type="application/rss+xml" title="$BLOGTITLE" href="/$WWWDIR/rss.xml" />"
 echo "	</head>"
 echo "	<body>"
 echo "		<h1 id="header"><a href="/$WWWDIR/index.html">$BLOGTITLE</a></h1>"
 echo "		<span id="desc">$BLOGDESC</span>"
 echo "		<div id="sidebar">"
-enable_mod latest
+		enable_mod latest
 echo "		</div>"
 echo "		<div id="content">"
 for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do

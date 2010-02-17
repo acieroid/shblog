@@ -5,6 +5,10 @@ function get_title {
 	cat $article | grep ^title:: | sed s/title:://
 }
 
+function get_date {
+	cat $article | grep ^date:: | sed s/date:://
+}
+
 # Works out post tags
 function get_tags {
 	cat $article | grep ^tags:: | sed s/tags:://
@@ -30,7 +34,7 @@ function get_author {
 
 # Displays the post without its headers
 function get_post {
-	cat $article | sed "1,4d"
+	cat $article | sed "1,5d"
 }
 
 function get_post_clean_path {
@@ -45,6 +49,10 @@ function get_post_static_path {
 # Define HTML path for one post
 function get_post_html_path {
         echo $article | sed s_"$DATADIR"_"/$WWWDIR"_ | sed s_".shpost"_".html"_
+}
+
+function get_www_link {
+	echo $BLOGURL`get_post_html_path`
 }
 
 # Generates HTML post

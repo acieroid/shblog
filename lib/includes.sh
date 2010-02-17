@@ -13,6 +13,7 @@ LASTDU=$TMPDIR/lastdu
 # www dir
 WWWBASE=/var/www
 WWWDIR=shblog
+BLOGURL=http://blog.url.com
 
 # Settings
 . $LIBDIR/settings.sh
