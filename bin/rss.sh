@@ -8,7 +8,7 @@ echo "	<channel>"
 echo "		<title>$BLOGTITLE</title>"
 echo "		<link>$BLOGURL</link>"
 echo "		<description>$BLOGDESC</description>"
-echo "		<lastBuildDate>`date`</lastBuildDate>"
+echo "		<lastBuildDate>`date --rfc-822`</lastBuildDate>"
 echo "		<language>$BLOGLANG</language>"
 for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
 	echo "		<item>"
