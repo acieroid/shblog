@@ -9,17 +9,13 @@ THEMEDIR=$STATICDIR/theme
 TMPDIR=$BASEDIR/tmp
 LASTDU=$TMPDIR/lastdu
 
+# Settings
+. $LIBDIR/settings.sh
+
 # post.sh
 TODAYDIR=$DATADIR/`date +%Y`/`date +%m`/`date +%d`
 if [ -z $POSTNAME ]; then POSTNAME=post; fi
 TODAYPOST=$TODAYDIR/`date +%H%M%S`-$POSTNAME.shpost
-EDITOR=vim
-
-# You shall modify the title and description of your blog
-BLOGTITLE=shblog
-BLOGDESC="un blog en bash"
 
 # Let's include functions eventually!
 . $LIBDIR/functions.sh
-# Client-side variables
-. $LIBDIR/client.sh

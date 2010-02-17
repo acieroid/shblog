@@ -4,20 +4,15 @@
 export BASEDIR=$HOME/shblog
 export POSTNAME=$2
 
+[ -d $TMPDIR ] || mkdir $TMPDIR
+
 case "$1" in
-	index)
-		$BASEDIR/bin/index.sh
-		;;
-	post)
-		$BASEDIR/bin/post.sh
-		;;
-	gen)
-		$BASEDIR/bin/gen.sh
-		;;
-	daemon)
-		$BASEDIR/bin/daemon.sh
-		;;
 	*)
-		echo "Usage: $0 {index|post|gen|daemon}"
+		if [ -e $BASEDIR/bin/$1.sh ]
+		then
+			$BASEDIR/bin/$1.sh $@
+		else
+			echo "Usage: $0 {post|gen|daemon}"
+		fi
 		;;
 esac

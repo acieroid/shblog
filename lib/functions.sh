@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Works out post title
 function get_title {
 	cat $article | grep ^title:: | sed s/title:://
@@ -22,11 +24,26 @@ function get_tags_tab {
 }
 
 # Works out post author
-function get_post_author {
+function get_author {
 	cat $article | grep ^author:: | sed s/author:://
 }
 
 # Displays the post without its headers
 function get_post {
 	cat $article | sed "1,4d"
+}
+
+function get_post_clean_path {
+	basename $article .shpost
+}
+
+# Defines HTML path for one post
+function get_post_html_path {
+	echo $article | sed s_"$DATADIR"_"$STATICDIR"_ | sed s_".shpost"_".html"_
+}
+
+# Generates HTML post
+function gen_post_html {
+	mkdir -p $STATICDIR/`dirname $article | sed s_"$DATADIR/"__`
+	$BINDIR/single.sh "`get_title`" "`get_tags_tab`" "`get_author`" "`get_post`" > `get_post_html_path`
 }

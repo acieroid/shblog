@@ -21,6 +21,15 @@ hr { display: none; }
 	margin: 1em 0 1em 0;
 	}
 
+#header a {
+	text-decoration: none;
+	color: #4b4b4b;
+	}
+
+#header a:hover {
+	color: #1b1b1b;
+	}
+
 #desc {
 	position: relative;
 	top: 0.75em;
@@ -38,6 +47,15 @@ hr { display: none; }
 	padding: 1em;
 	background: #e5e5e5;
 	border: 1px solid #e0e0e0;
+	}
+
+.post-title a {
+	color: #4b4b4b;
+	text-decoration: none;
+	}
+
+.post-title a:hover {
+	color: #1b1b1b;
 	}
 
 .post-tags {
