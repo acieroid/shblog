@@ -9,6 +9,9 @@ THEMEDIR=$STATICDIR/theme
 TMPDIR=$BASEDIR/tmp
 LASTDU=$TMPDIR/lastdu
 
+# www dir
+WWWDIR=/var/www/shblog
+
 # Settings
 . $LIBDIR/settings.sh
 

@@ -37,13 +37,18 @@ function get_post_clean_path {
 	basename $article .shpost
 }
 
-# Defines HTML path for one post
-function get_post_html_path {
+# Defines static path for one post
+function get_post_static_path {
 	echo $article | sed s_"$DATADIR"_"$STATICDIR"_ | sed s_".shpost"_".html"_
+}
+
+# Define HTML path for one post
+function get_post_html_path {
+        echo $article | sed s_"$DATADIR"_"$WWWDIR"_ | sed s_".shpost"_".html"_
 }
 
 # Generates HTML post
 function gen_post_html {
 	mkdir -p $STATICDIR/`dirname $article | sed s_"$DATADIR/"__`
-	$BINDIR/single.sh "`get_title`" "`get_tags_tab`" "`get_author`" "`get_post`" > `get_post_html_path`
+	$BINDIR/single.sh "`get_title`" "`get_tags_tab`" "`get_author`" "`get_post`" > `get_post_static_path`
 }
