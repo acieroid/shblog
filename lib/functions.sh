@@ -44,7 +44,7 @@ function get_post_static_path {
 
 # Define HTML path for one post
 function get_post_html_path {
-        echo $article | sed s_"$DATADIR"__ | sed s_".shpost"_".html"_
+        echo $article | sed s_"$DATADIR"_"/$WWWDIR"_ | sed s_".shpost"_".html"_
 }
 
 # Generates HTML post
