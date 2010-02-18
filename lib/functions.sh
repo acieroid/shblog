@@ -62,6 +62,7 @@ function gen_post_html {
 	$BINDIR/single.sh "`get_title`" "`get_tags_tab`" "`get_author`" "`get_post`" > `get_post_static_path`
 }
 
-function enable_mod {
+# Modules
+function mod_enable {
 	. $MODDIR/$1.sh
 }

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-function gen_rss {
-        $BASEDIR/shblog.sh rss > $STATICDIR/rss.xml
+function rss_gen {
+        $MODDIR/rss_gen.sh > $STATICDIR/rss.xml
 }
 
-gen_rss
+rss_gen

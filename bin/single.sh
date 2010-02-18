@@ -7,17 +7,18 @@ POSTTAGS="$2"
 POSTAUTHOR="$3"
 POSTCONTENT="$4"
 
-enable_mod latest
-enable_mod rss
+mod_enable latest
+mod_enable rss
+mod_enable head
 
 echo "<!DOCTYPE html>"
 echo "<html lang="fr">"
 echo "  <head>"
 echo "          <meta charset="utf-8">"
-echo "          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />"
+echo "          <meta http-equiv="Content-Type" content=\"text/html; charset=utf-8\" />"
 echo "          <title>$POSTTITLE - $BLOGTITLE</title>"
 echo "          <link rel="stylesheet" type="text/css" href="/$WWWDIR/theme/style.css" media="screen" />"
-echo "          <link rel="alternate" type="application/rss+xml" title="$BLOGTITLE" href="/$WWWDIR/rss.xml" />"
+display_head
 echo "  </head>"
 echo "  <body>"
 echo "          <h1 id="header"><a href="/$WWWDIR/index.html">$BLOGTITLE</a></h1>"
