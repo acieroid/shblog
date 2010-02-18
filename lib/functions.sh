@@ -34,7 +34,8 @@ function get_author {
 
 # Displays the post without its headers
 function get_post {
-	cat $article | sed "1,5d"
+	POSTLINE=`cat $article | grep -n ^post:: | head -n 1 | cut -d: -f1`
+	cat $article | sed "1,"$POSTLINE"d"
 }
 
 function get_post_clean_path {
