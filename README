@@ -1,10 +1,11 @@
 shblog by AddiKT1ve <the.addikt1ve@gmail.com>
 shblog is distributed under the terms of the GPL v3.
 
-You may use CGI with your httpd to display shblog output (index.sh).
-You may also use gen.sh to create a static/index.html file; thus you just have
-to $ ln -s $BASEDIR/static /var/www/shblog and your blog should be available
-at http://localhost/shblog/
+Call ./shblog gen to create a static/index.html file; thus you just have to do
+$ ln -s $BASEDIR/static /var/www/shblog
+and your blog should be available at http://localhost/shblog/
+Don't forget to edit BASEDIR in shblog.sh and WWW* in lib/includes.sh.
+You can change your blog's name and description in lib/settings.sh.
 
 You should initialize $DATADIR as a darcs repository, so that you can publish
 posts from any computer. See cron.example (included) to refresh the "cache".
