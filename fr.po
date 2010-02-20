@@ -15,8 +15,3 @@ msgstr ""
 #, sh-format
 msgid "<html lang=\"en\">"
 msgstr "fail"
-
-#: bin/index.sh:39
-#, sh-format
-msgid "bonjour"
-msgstr "hello"

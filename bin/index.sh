@@ -36,6 +36,5 @@ for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
 done
 echo "		</div>"
 echo "		<p id="footer">powered by <a href="http://github.com/addikt1ve/shblog">shblog</a>"
-echo $(eval_gettext 'bonjour')
 echo "	</body>"
 echo "</html>"
