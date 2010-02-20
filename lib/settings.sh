@@ -8,4 +8,4 @@ BLOGTITLE="shblog"
 BLOGDESC="un blog en bash"
 
 # Language
-BLOGLANG="en-us"
+BLOGLANG="fr"

@@ -4,6 +4,10 @@
 export BASEDIR=$HOME/shblog
 export POSTNAME=$2
 
+# Localization
+export TEXTDOMAINDIR=$BASEDIR/lib/locale
+export TEXTDOMAIN=shblog
+
 [ -d $TMPDIR ] || mkdir $TMPDIR
 
 case "$1" in

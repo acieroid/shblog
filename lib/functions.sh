@@ -5,6 +5,7 @@ function get_title {
 	cat $article | grep ^title:: | sed s/title:://
 }
 
+# Works out post date
 function get_date {
 	cat $article | grep ^date:: | sed s/date:://
 }

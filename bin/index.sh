@@ -7,7 +7,7 @@ mod_enable rss
 mod_enable head
 
 echo "<!DOCTYPE html>"
-echo "<html lang="fr">"
+echo $(eval_gettext '<html lang="en">')
 echo "	<head>"
 echo "		<meta charset="utf-8">"
 echo "		<meta http-equiv="Content-Type" content=\"text/html; charset=utf-8\" />"
@@ -36,5 +36,6 @@ for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
 done
 echo "		</div>"
 echo "		<p id="footer">powered by <a href="http://github.com/addikt1ve/shblog">shblog</a>"
+echo $(eval_gettext 'bonjour')
 echo "	</body>"
 echo "</html>"
