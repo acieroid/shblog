@@ -17,5 +17,5 @@ get_post_id
 
 POSTNAME=$2
 TODAYDIR=$DATADIR/`date +%Y`/`date +%m`/`date +%d`
-if [ -z $POSTNAME ]; then POSTNAME=post; fi
+if [ -z "$POSTNAME" ]; then POSTNAME=post; fi
 TODAYPOST=$TODAYDIR/$POSTID-$POSTNAME.shpost
