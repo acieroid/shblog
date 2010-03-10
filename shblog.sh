@@ -2,7 +2,6 @@
 
 # Where is shblog installed?
 export BASEDIR=$HOME/shblog
-export POSTNAME=$2
 
 # Localization
 export TEXTDOMAINDIR=$BASEDIR/lib/locale
@@ -16,7 +15,7 @@ case "$1" in
 		then
 			$BASEDIR/bin/$1.sh $@
 		else
-			echo "Usage: $0 {post|gen|daemon}"
+			echo "Usage: $0 {post|gen|daemon|clean}"
 		fi
 		;;
 esac

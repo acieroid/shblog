@@ -4,8 +4,7 @@ shblog is distributed under the terms of the GPL v3.
 Call ./shblog gen to create a static/index.html file; thus you just have to do
 $ ln -s $BASEDIR/static /var/www/shblog
 and your blog should be available at http://localhost/shblog/
-Don't forget to edit BASEDIR in shblog.sh and WWW* in lib/includes.sh.
-You can change your blog's name and description in lib/settings.sh.
+Basically, all you need to edit is BASEDIR in shblog.sh and lib/settings.sh.
 
 You should initialize $DATADIR as a darcs repository, so that you can publish
 posts from any computer. See cron.example (included) to refresh the "cache".
@@ -16,6 +15,6 @@ $DATADIR
 └── YYYY
     └── MM
         └── DD
-            └── HHMMSS-title.shpost
+            └── POSTID-title.shpost
 
 Enjoy using shblog :-)

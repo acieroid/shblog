@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# basic configuration
+WWWBASE=/var/www
+WWWDIR=shblog
+BLOGURL=http://blog.url.com
+
 # Don't troll :-)
 EDITOR=vim
 
