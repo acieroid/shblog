@@ -3,7 +3,7 @@
 # basic configuration
 WWWBASE=/var/www
 WWWDIR=shblog
-BLOGURL=http://blog.url.com
+BLOGURL=http://blog.url.com/path # complete URL, without final slash
 
 # Don't troll :-)
 EDITOR=vim
