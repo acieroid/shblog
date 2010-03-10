@@ -17,11 +17,11 @@ echo "  <head>"
 echo "          <meta charset="utf-8">"
 echo "          <meta http-equiv="Content-Type" content=\"text/html; charset=utf-8\" />"
 echo "          <title>$POSTTITLE - $BLOGTITLE</title>"
-echo "          <link rel="stylesheet" type="text/css" href="/$WWWDIR/theme/style.css" media="screen" />"
+echo "          <link rel="stylesheet" type="text/css" href="$BLOGURL/theme/style.css" media="screen" />"
 display_head
 echo "  </head>"
 echo "  <body>"
-echo "          <h1 id="header"><a href="/$WWWDIR/index.html">$BLOGTITLE</a></h1>"
+echo "          <h1 id="header"><a href="$BLOGURL/index.html">$BLOGTITLE</a></h1>"
 echo "          <span id="desc">$BLOGDESC</span>"
 echo "		<div id="sidebar">"
 		display_latest_posts
