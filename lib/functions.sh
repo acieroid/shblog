@@ -21,7 +21,7 @@ function get_tags_tab {
 	y=1
 	nbr=`get_tags | wc -w`
 	while [ "$y" -le "$nbr" ]; do
-		tag=`get_tags | cut -d, -f $x`
+		tag=`get_tags | cut -d' ' -f $x`
 		tab[$x]=$tag
 		x=$(($x+1))
 		y="$x"
