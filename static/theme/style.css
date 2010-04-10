@@ -43,6 +43,15 @@ hr { display: none; }
 	margin-top: 4em;
 	}
 
+#sidebar a {
+	color: #4b4b4b;
+	text-decoration: none;
+	}
+
+#sidebar a:hover {
+	color: #1b1b1b;
+	}
+
 /* Content */
 #content {
 	margin: 3em 15em 0 0;
