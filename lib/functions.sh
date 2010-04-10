@@ -36,7 +36,9 @@ function get_author {
 # Displays the post without its headers
 function get_post {
 	POSTLINE=`cat $article | grep -n ^post:: | head -n 1 | cut -d: -f1`
-	cat $article | sed "1,"$POSTLINE"d"
+	IFS='
+	'
+	for f in `cat $article | sed "1,"$POSTLINE"d"`; do echo "<p>$f</p>"; done
 }
 
 function get_post_clean_path {
