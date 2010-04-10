@@ -15,6 +15,7 @@ function get_tags {
 	cat $article | grep ^tags:: | sed s/tags:://
 }
 
+# Works out a tags tab per post
 function get_tags_tab {
 	x=1
 	y=1
@@ -41,6 +42,7 @@ function get_post {
 	for f in `cat $article | sed "1,"$POSTLINE"d"`; do echo "<p>$f</p>"; done
 }
 
+# Works out post name
 function get_post_clean_path {
 	basename $article .shpost
 }
@@ -55,6 +57,7 @@ function get_post_html_path {
 	echo $article | sed s_"$DATADIR/"_""_ | sed s_".shpost"_".html"_
 }
 
+# Another dirty function
 function get_www_link {
 	echo $BLOGURL/`get_post_html_path`
 }

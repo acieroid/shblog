@@ -18,6 +18,3 @@ export LANG=$BLOGLANG
 # Functions
 . $LIBDIR/post-includes.sh
 . $LIBDIR/functions.sh
-
-# Modules
-. $MODDIR/*.sh
