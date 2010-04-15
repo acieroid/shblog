@@ -22,7 +22,7 @@ echo "		<div id="sidebar">"
 		display_latest_posts
 echo "		</div>"
 echo "		<div id="content">"
-for article in $(find $DATADIR/ -name '*.shpost' | sort -t '/' -k 5 -nr); do
+for article in $(find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -nr); do
 	echo "			<div class="post">"
 	echo "				<h2 class="post-title"><a href="\"$(get_www_link)\"">$(get_title)</a></h2>"
 	if [ -n "`get_tags`" ]; then
