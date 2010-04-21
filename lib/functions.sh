@@ -6,7 +6,7 @@ function find_posts {
 }
 
 # Find posts (asc)
-function find_post_asc {
+function find_posts_asc {
 	find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -n
 }
 

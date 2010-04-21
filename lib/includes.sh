@@ -16,5 +16,5 @@ LASTDU=$TMPDIR/lastdu
 export LANG=$BLOGLANG
 
 # Functions
-. $LIBDIR/post-includes.sh
 . $LIBDIR/functions.sh
+. $LIBDIR/post-includes.sh
