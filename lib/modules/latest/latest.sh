@@ -3,7 +3,7 @@
 LATESTNBR=5
 
 function get_latest_posts {
-	 find $DATADIR/ -name '*.shpost' | sort -r | head -n $LATESTNBR
+	 find_posts | head -n $LATESTNBR
 }
 
 function display_latest_posts {
