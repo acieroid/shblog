@@ -6,7 +6,7 @@ function get_post_id {
 	then
 		export POSTID=1
 	else
-		for i in $(find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -n); do
+		for i in $(find_posts_asc); do
 			LASTID=`basename "$i" | cut -d- -f1`
 		done
 		POSTID=$(($LASTID+1))

@@ -10,7 +10,7 @@ echo "		<link>$BLOGURL</link>"
 echo "		<description>$BLOGDESC</description>"
 echo "		<lastBuildDate>`date --rfc-822`</lastBuildDate>"
 echo "		<language>$BLOGLANG</language>"
-for article in $(find $DATADIR/ -name '*.shpost' | sort -r); do
+for article in $(find_posts); do
 	echo "		<item>"
 	echo "			<title>$(get_title)</title>"
 	echo "			<link>$(get_www_link)</link>"

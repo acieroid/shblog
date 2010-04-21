@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# Finds posts (desc)
+function find_posts {
+	find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -nr
+}
+
+# Find posts (asc)
+function find_post_asc {
+	find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -n
+}
+
 # Works out post title
 function get_title {
 	cat $article | grep ^title:: | sed s/title:://
@@ -39,7 +49,7 @@ function get_post {
 	POSTLINE=`cat $article | grep -n ^post:: | head -n 1 | cut -d: -f1`
 	IFS='
 	'
-	for f in `cat $article | sed "1,"$POSTLINE"d"`; do echo "<p>$f</p>"; done
+	for body in `cat $article | sed "1,"$POSTLINE"d"`; do echo "<p>$body</p>"; done
 }
 
 # Works out post name
