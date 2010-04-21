@@ -18,7 +18,7 @@ echo "          <meta charset="utf-8">"
 echo "          <meta http-equiv="Content-Type" content=\"text/html; charset=utf-8\" />"
 echo "          <title>$POSTTITLE - $BLOGTITLE</title>"
 echo "          <link rel="stylesheet" type="text/css" href="$BLOGURL/theme/style.css" media="screen" />"
-display_head
+get_custom_head
 echo "  </head>"
 echo "  <body>"
 echo "          <h1 id="header"><a href="$BLOGURL/index.html">$BLOGTITLE</a></h1>"
