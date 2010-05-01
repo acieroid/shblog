@@ -23,8 +23,6 @@ echo "		<div id="sidebar">"
 echo "		</div>"
 echo "		<div id="content">"
 for article in $(find_posts); do
-echo $article
-echo $IDPOSITION
 	echo "			<div class="post">"
 	echo "				<h2 class="post-title"><a href="\"$(get_www_link)\"">$(get_title)</a></h2>"
 	if [ -n "`get_tags`" ]; then
