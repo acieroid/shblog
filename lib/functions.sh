@@ -2,12 +2,12 @@
 
 # Finds posts (desc)
 function find_posts {
-	find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -nr
+	find $DATADIR/ -name '*.shpost' | sort -t '/' -k $IDPOSITION -nr
 }
 
 # Find posts (asc)
 function find_posts_asc {
-	find $DATADIR/ -name '*.shpost' | sed s_"$BASEDIR/"_""_ | sort -t '/' -k 5 -n
+	find $DATADIR/ -name '*.shpost' | sort -t '/' -k $IDPOSITION -n
 }
 
 # Works out post title

@@ -2,4 +2,4 @@
 
 . $BASEDIR/lib/includes.sh
 
-rm -rf $STATICDIR/data $STATICDIR/index.html $STATICDIR/rss.xml $TMPDIR/*
+rm -rf $STATICDIR/2010 $STATICDIR/index.html $STATICDIR/rss.xml $TMPDIR/*

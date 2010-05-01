@@ -6,9 +6,13 @@ LIBDIR=$BASEDIR/lib
 DATADIR=$BASEDIR/data
 STATICDIR=$BASEDIR/static
 THEMEDIR=$STATICDIR/theme
-TMPDIR=$BASEDIR/tmp
 MODDIR=$LIBDIR/modules
+TMPDIR=$BASEDIR/tmp
 LASTDU=$TMPDIR/lastdu
+
+# Black magic crap that does the job
+DATAPOSITION=`echo $DATADIR | tr '/' '\n' | wc -l`
+let IDPOSITION=$DATAPOSITION+4
 
 # Settings
 . $LIBDIR/gettext.sh # Localization
