@@ -22,3 +22,6 @@ export LANG=$BLOGLANG
 # Functions
 . $LIBDIR/functions.sh
 . $LIBDIR/post-includes.sh
+
+# Modules
+mod_enable

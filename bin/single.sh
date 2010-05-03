@@ -7,10 +7,6 @@ POSTTAGS="$2"
 POSTAUTHOR="$3"
 POSTCONTENT="$4"
 
-mod_enable latest
-mod_enable rss
-mod_enable head
-
 echo "<!DOCTYPE html>"
 echo "<html lang="fr">"
 echo "  <head>"

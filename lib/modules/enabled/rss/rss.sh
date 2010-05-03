@@ -1,7 +1,5 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
-
 function rss_gen {
 	echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
 	echo "<rss version=\"2.0\">"

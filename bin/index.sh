@@ -2,10 +2,6 @@
 
 . $BASEDIR/lib/includes.sh
 
-mod_enable latest
-mod_enable rss
-mod_enable head
-
 echo "<!DOCTYPE html>"
 echo $(eval_gettext '<html lang="en">')
 echo "	<head>"

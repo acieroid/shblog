@@ -80,5 +80,8 @@ function gen_post_html {
 
 # Enable modules
 function mod_enable {
-	. $MODDIR/$1/$1.sh
+	for module in $MODDIR/enabled/*; do
+		modname=`basename $module`
+		. $module/$modname.sh
+	done
 }
