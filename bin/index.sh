@@ -8,7 +8,7 @@ echo "	<head>"
 echo "		<meta charset="utf-8">"
 echo "		<meta http-equiv="Content-Type" content=\"text/html; charset=utf-8\" />"
 echo "		<title>$BLOGTITLE</title>"
-echo "		<link rel="stylesheet" type="text/css" href="$BLOGURL/theme/style.css" media="screen" />"
+echo "		<link rel="stylesheet" type="text/css" href="$BLOGURL/themes/$BLOGTHEME/style.css" media="screen" />"
 get_custom_head
 echo "	</head>"
 echo "	<body>"

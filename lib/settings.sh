@@ -12,3 +12,6 @@ BLOGDESC="write your own"
 
 # Language
 BLOGLANG="en"
+
+# Selected theme
+BLOGTHEME="default"
