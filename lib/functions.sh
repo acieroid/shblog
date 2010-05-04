@@ -52,6 +52,11 @@ function get_post {
 	for body in `cat $article | sed "1,"$POSTLINE"d"`; do echo "<p>$body</p>"; done
 }
 
+# Find a post with its ID
+function get_article_by_id {
+	article=`find_posts | grep "/$1-"`
+}
+
 # Works out post name
 function get_post_clean_path {
 	basename $article .shpost

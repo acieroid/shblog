@@ -19,3 +19,8 @@ while [ "$EDIT" != "y" -a "$EDIT" != "n" ]; do
 			;;
 	esac
 done
+
+# Generate static pages
+get_article_by_id $POSTID
+gen_post_html
+$BINDIR/gen.sh

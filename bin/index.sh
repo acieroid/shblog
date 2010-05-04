@@ -29,7 +29,6 @@ for article in $(find_posts); do
 	echo "				<div class="post-content">$(get_post)</div>"
 	echo "				<hr />"
 	echo "			</div>"
-	gen_post_html
 done
 echo "		</div>"
 echo "		<p id="footer">powered by <a href="http://github.com/addikt1ve/shblog">shblog</a>"

@@ -1,20 +1,42 @@
+shblog
+======
+
 shblog by AddiKT1ve <the.addikt1ve@gmail.com>
 shblog is distributed under the terms of the GPL v3.
 
-Call ./shblog gen to create a static/index.html file; thus you just have to do
+INSTALLATION
+------------
+
+As of today, the proper way to install shblog is to export its $BASEDIR into
+your $PATH.
+
+$ git clone git://github.com/addikt1ve/shblog.git
+$ export PATH=$HOME/shblog:$PATH
+
+Call shblog gen to create a static/index.html file; thus you just have to do
 $ ln -s $BASEDIR/static /var/www/shblog
 and your blog should be available at http://localhost/shblog/
 Basically, all you need to edit is BASEDIR in shblog.sh and lib/settings.sh.
 
-You should initialize $DATADIR as a darcs repository, so that you can publish
-posts from any computer. See cron.example (included) to refresh the "cache".
-You can use ./shblog post to create a new post; you can create it from scratch
-too, respecting the usual tree:
+BASIC USAGE
+-----------
 
-$DATADIR
-└── YYYY
-    └── MM
-        └── DD
-            └── POSTID-title.shpost
+You will mainly use the "post" command:
+
+$ shblog post [post-title]
+
+This command creates a new .shpost file in $DATADIR/year/month/day/.
+Once you're finished with editing your new post, shblog will automatically do
+the generation job. But if you edit your .shpost file later, you will need to
+launch the HTML generation process by yourself:
+
+$ shblog gen single <post-id>
+
+And if you need to update your blog's index:
+
+$ shblog gen index
+
+I know it **can** be improved. So please:
+http://github.com/addikt1ve/shblog/issues
 
 Enjoy using shblog :-)
