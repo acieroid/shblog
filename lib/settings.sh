@@ -15,3 +15,6 @@ BLOGLANG="en"
 
 # Selected theme
 BLOGTHEME="default"
+
+# Number of posts displayed on the index
+INDEXPOSTS="10"

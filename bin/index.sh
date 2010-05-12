@@ -2,6 +2,9 @@
 
 . $BASEDIR/lib/includes.sh
 
+# Define page number
+pagenum="$1"
+
 echo "<!DOCTYPE html>"
 echo $(eval_gettext '<html lang="en">')
 echo "	<head>"
@@ -19,7 +22,7 @@ echo "		<div id="sidebar">"
 		display_blogroll
 echo "		</div>"
 echo "		<div id="content">"
-for article in $(find_posts); do
+for article in $tmplist; do
 	echo "			<div class="post">"
 	echo "				<h2 class="post-title"><a href="\"$(get_www_link)\"">$(get_title)</a></h2>"
 	if [ -n "`get_tags`" ]; then
@@ -30,6 +33,20 @@ for article in $(find_posts); do
 	echo "				<hr />"
 	echo "			</div>"
 done
+# Pagination tests
+echo "      <p id="pagination">"
+if [ "$2" != "latest" ]; then
+	echo "				<a href="$BLOGURL/index-$(($pagenum+1)).html">Next</a>"
+fi
+if [ "$pagenum" != 1 ]; then
+	if [ "$pagenum" = 2 ]; then
+		previndex=index.html
+	else
+		previndex="index-$(($pagenum-1)).html"
+	fi
+	echo "				<a href="$BLOGURL/$previndex">Previous</a>"
+fi
+echo "			</p>"
 echo "		</div>"
 echo "		<p id="footer">powered by <a href="http://github.com/addikt1ve/shblog">shblog</a>"
 echo "	</body>"
