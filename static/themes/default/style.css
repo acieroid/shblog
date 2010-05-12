@@ -100,6 +100,19 @@ hr { display: none; }
 	color: #1b1b1b;
 	}
 
+/* Pagination */
+#pagination {
+	text-align: center;
+	}
+
+#pagination a {
+	color: #afafaf;
+	}
+
+#pagination a:hover {
+	color: #4b4b4b;
+	}
+
 /* Footer */
 #footer {
 	color: #afafaf;
