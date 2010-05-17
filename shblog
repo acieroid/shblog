@@ -7,8 +7,6 @@ export BASEDIR=$HOME/shblog
 export TEXTDOMAINDIR=$BASEDIR/lib/locale
 export TEXTDOMAIN=shblog
 
-[ -d $TMPDIR ] || mkdir $TMPDIR
-
 case "$1" in
 	*)
 		if [ -e $BASEDIR/bin/$1.sh ]

@@ -8,6 +8,8 @@ DATADIR=$BASEDIR/data
 STATICDIR=$BASEDIR/static
 THEMESDIR=$STATICDIR/themes
 MODDIR=$LIBDIR/modules
+# You shouldn't modify that either
+TIMESTAMPSDB=$DATADIR/timestamps.db
 
 # Black magic crap that does the job
 DATAPOSITION=`echo $DATADIR | tr '/' '\n' | wc -l`
@@ -15,7 +17,7 @@ let IDPOSITION=$DATAPOSITION+4
 
 # Settings
 . $LIBDIR/gettext.sh # Localization
-source $CONFDIR/settings.sh # User preferences
+. $CONFDIR/shblog.conf # User preferences
 export LANG=$BLOGLANG
 
 # Functions

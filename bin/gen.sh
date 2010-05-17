@@ -35,4 +35,6 @@ case "$2" in
 		get_article_by_id $POSTID
 		gen_post_html
 		;;
+	*)
+		echo "Usage: shblog gen index | single <ID>"
 esac
