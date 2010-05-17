@@ -12,17 +12,17 @@ function find_posts_asc {
 
 # Works out post title
 function get_title {
-	cat $article | grep ^title:: | sed s/title:://
+	grep ^title:: $article | sed s/title:://
 }
 
 # Works out post date
 function get_date {
-	cat $article | grep ^date:: | sed s/date:://
+	grep ^date:: $article | sed s/date:://
 }
 
 # Works out post tags
 function get_tags {
-	cat $article | grep ^tags:: | sed s/tags:://
+	grep ^tags:: $article | sed s/tags:://
 }
 
 # Works out a tags tab per post
@@ -41,15 +41,15 @@ function get_tags_tab {
 
 # Works out post author
 function get_author {
-	cat $article | grep ^author:: | sed s/author:://
+	grep ^author:: $article | sed s/author:://
 }
 
 # Displays the post without its headers
 function get_post {
-	POSTLINE=`cat $article | grep -n ^post:: | head -n 1 | cut -d: -f1`
+	POSTLINE=`grep -n ^post:: $article | head -n 1 | cut -d: -f1`
 	IFS='
 	'
-	for body in `cat $article | sed "1,"$POSTLINE"d"`; do echo "<p>$body</p>"; done
+	for body in `sed "1,"$POSTLINE"d" $article`; do echo "<p>$body</p>"; done
 }
 
 # Find a post with its ID

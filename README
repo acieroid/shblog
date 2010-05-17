@@ -16,7 +16,7 @@ $ export PATH=$HOME/shblog:$PATH
 Call shblog gen to create a static/index.html file; thus you just have to do
 $ ln -s $BASEDIR/static /var/www/shblog
 and your blog should be available at http://localhost/shblog/
-Basically, all you need to edit is BASEDIR in /shblog and lib/settings.sh.
+Basically, all you need to edit is BASEDIR in /shblog and conf/shblog.conf.
 
 BASIC USAGE
 -----------
