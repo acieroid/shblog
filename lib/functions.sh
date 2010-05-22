@@ -52,6 +52,11 @@ function get_post {
 	for body in `sed "1,"$POSTLINE"d" $article`; do echo "<p>$body</p>"; done
 }
 
+# Displays the sidebar
+function get_sidebar {
+	. $BINDIR/sidebar.sh
+}
+
 # Find a post with its ID
 function get_article_by_id {
 	article=`find_posts | grep "/$1-"`

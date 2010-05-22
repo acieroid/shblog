@@ -29,8 +29,10 @@ echo "				<h2 class="post-title">$POSTTITLE</h2>"
 echo "				<span class="post-tags">Tags : $POSTTAGS</span>"
 echo "				<span class="post-author">by $POSTAUTHOR</span>"
 echo "				<div class="post-content">$POSTCONTENT</div>"
+get_custom_content
 echo "			</div>"
 echo "		</div>"
 echo "          <p id="footer">powered by <a href="http://github.com/addikt1ve/shblog">shblog</a>"
+get_custom_foot
 echo "	</body>"
 echo "</html>"

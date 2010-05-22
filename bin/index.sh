@@ -17,10 +17,11 @@ echo "	</head>"
 echo "	<body>"
 echo "		<h1 id="header"><a href="$BLOGURL/index.html">$BLOGTITLE</a></h1>"
 echo "		<span id="desc">$BLOGDESC</span>"
-echo "		<div id="sidebar">"
-		display_latest_posts
-		display_blogroll
-echo "		</div>"
+get_sidebar
+#echo "		<div id="sidebar">"
+#		display_latest_posts
+#		display_blogroll
+#echo "		</div>"
 echo "		<div id="content">"
 for article in $tmplist; do
 	echo "			<div class="post">"
@@ -49,5 +50,6 @@ fi
 echo "			</p>"
 echo "		</div>"
 echo "		<p id="footer">powered by <a href="http://github.com/addikt1ve/shblog">shblog</a>"
+get_custom_foot
 echo "	</body>"
 echo "</html>"
