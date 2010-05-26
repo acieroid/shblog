@@ -5,6 +5,10 @@ function find_posts {
 	find $DATADIR/ -name '*.shpost' | sort -t '/' -k $IDPOSITION -nr
 }
 
+function find_posts_id {
+	find_posts | sed -e 's/^.*\/\([0-9][0-9]*\)[^/]*$/\1/'
+}
+
 # Find posts (asc)
 function find_posts_asc {
 	find $DATADIR/ -name '*.shpost' | sort -t '/' -k $IDPOSITION -n

@@ -19,10 +19,9 @@ echo "  </head>"
 echo "  <body>"
 echo "          <h1 id="header"><a href="$BLOGURL/index.html">$BLOGTITLE</a></h1>"
 echo "          <span id="desc">$BLOGDESC</span>"
-echo "		<div id="sidebar">"
-		display_latest_posts
-		display_blogroll
-echo "		</div>"
+# get_sidebar
+# since the sidebar is a dynamic part of your blog, displaying it on each post
+# will force you into regenerating the whole thing everytime.
 echo "          <div id="content">"
 echo "			<div class="post">"
 echo "				<h2 class="post-title">$POSTTITLE</h2>"
