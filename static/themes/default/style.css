@@ -80,11 +80,11 @@ hr { display: none; }
 	border-bottom: 1px solid #cdcdcd;
 	}
 
-.post-author {
+.post-date, .post-author {
 	margin-left: 1em;
 	padding-bottom: 1em;
 	font-size: 0.8em;
-        border-bottom: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
 	}
 
 .post-content {
