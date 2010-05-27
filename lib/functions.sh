@@ -19,9 +19,14 @@ function get_title {
 	grep ^title:: $article | sed s/title:://
 }
 
-# Works out post date
-function get_date {
+# Works out post timestamp
+function get_timestamp {
 	grep ^date:: $article | sed s/date:://
+}
+
+# Works out post date using its timestamp
+function get_date {
+	date -d "@`get_timestamp`" $1
 }
 
 # Works out post tags

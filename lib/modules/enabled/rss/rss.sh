@@ -14,7 +14,7 @@ function rss_gen {
 		echo "			<title>$(get_title)</title>"
 		echo "			<link>$(get_www_link)</link>"
 		echo "			<guid>$(get_www_link)</guid>"
-		echo "			<pubDate>$(get_date)</pubDate>"
+		echo "			<pubDate>$(get_date --rfc-822)</pubDate>"
 		echo "			<description>$(get_post)</description>"
 		echo "		</item>"
 	done

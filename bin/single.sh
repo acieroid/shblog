@@ -26,6 +26,7 @@ echo "          <div id="content">"
 echo "			<div class="post">"
 echo "				<h2 class="post-title">$POSTTITLE</h2>"
 echo "				<span class="post-tags">Tags : $POSTTAGS</span>"
+echo "        <span class="post-date">Date : $(get_date '+%a %d %b %Y, %Hh%m')</span>"
 echo "				<span class="post-author">by $POSTAUTHOR</span>"
 echo "				<div class="post-content">$POSTCONTENT</div>"
 get_custom_content

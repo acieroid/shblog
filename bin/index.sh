@@ -24,6 +24,7 @@ for article in $tmplist; do
 	echo "				<h2 class="post-title"><a href="\"$(get_www_link)\"">$(get_title)</a></h2>"
 	if [ -n "`get_tags`" ]; then
 		echo "				<span class="post-tags">Tags : $(get_tags_tab)</span>"
+		echo "				<span class="post-date">Date : $(get_date '+%a %d %b %Y, %Hh%m')</span>"
 	fi
 	echo "				<span class="post-author">by $(get_author)</span>"
 	echo "				<div class="post-content">$(get_post)</div>"
