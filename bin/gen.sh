@@ -39,9 +39,10 @@ case "$2" in
 		for POSTID in `find_posts_id`; do
 			get_article_by_id $POSTID
 			gen_post_html
+			$BASEDIR/shblog gen index
 		done
 		;;
 	*)
-		echo "Usage: shblog gen index | single <ID>"
+		echo "Usage: shblog gen index | single <ID> | all"
 		;;
 esac
