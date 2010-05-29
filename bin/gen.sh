@@ -43,6 +43,6 @@ case "$2" in
 		done
 		;;
 	*)
-		echo "Usage: shblog gen index | single <ID> | all"
+		echo "Usage: shblog gen [index | single <ID> | all]"
 		;;
 esac

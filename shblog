@@ -13,7 +13,7 @@ case "$1" in
 		then
 			$BASEDIR/bin/$1.sh $@
 		else
-			echo "Usage: $0 {post|gen|daemon|clean}"
+			echo "Usage: $0 [post | update | gen | clean]"
 		fi
 		;;
 esac
