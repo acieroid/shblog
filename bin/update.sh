@@ -16,6 +16,9 @@ for article in `cat $TIMESTAMPSDB.diff`; do
 	$BASEDIR/shblog gen single $postid
 done
 
+# Generate index files
+$BASEDIR/shblog gen index
+
 # Use updated database as new database
 mv $TIMESTAMPSDB.new $TIMESTAMPSDB
 # Remove .diff file

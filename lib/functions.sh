@@ -101,6 +101,7 @@ function gen_post_html {
 function mod_enable {
 	for module in $MODDIR/enabled/*; do
 		modname=`basename $module`
+		test -f "$module/modname.sh" || continue
 		. $module/$modname.sh
 	done
 }
