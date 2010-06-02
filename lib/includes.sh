@@ -6,6 +6,7 @@ LIBDIR=$BASEDIR/lib
 CONFDIR=$BASEDIR/conf
 DATADIR=$BASEDIR/data
 STATICDIR=$BASEDIR/static
+ARCHIVESDIR=$STATICDIR/archives
 THEMESDIR=$STATICDIR/themes
 MODDIR=$LIBDIR/modules
 # You shouldn't modify that either

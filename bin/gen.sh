@@ -35,6 +35,13 @@ case "$2" in
 		get_article_by_id $POSTID
 		gen_post_html
 		;;
+	archives)
+		archivesyears=`find_posts_html | sed s_"$STATICDIR/"__ | cut -d/ -f1`
+		for year in $archivesyears; do
+			[ -d $ARCHIVESDIR/$year ] || mkdir -p $ARCHIVESDIR/$year
+			$BINDIR/archives/year.sh $year > $ARCHIVESDIR/$year/index.html
+		done
+		;;
 	all)
 		for POSTID in `find_posts_id`; do
 			get_article_by_id $POSTID

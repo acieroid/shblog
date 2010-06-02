@@ -14,6 +14,11 @@ function find_posts_asc {
 	find $DATADIR/ -name '*.shpost' | sort -t '/' -k $IDPOSITION -n
 }
 
+# Find posts' HTML files
+function find_posts_html {
+	find $STATICDIR/*/ -name '*.html' | grep -v "$ARCHIVESDIR/" | sort -t '/' -k $IDPOSITION -nr
+}
+
 # Works out post title
 function get_title {
 	grep ^title:: $article | sed s/title:://
