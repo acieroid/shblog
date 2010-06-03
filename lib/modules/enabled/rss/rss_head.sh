@@ -1,5 +1,5 @@
 # add link to <head>
-function rss_head {
+rss_head() {
 	echo "		<link rel="alternate" type="application/rss+xml" title="$BLOGTITLE" href="$BLOGURL/rss.xml" />"
 }
 

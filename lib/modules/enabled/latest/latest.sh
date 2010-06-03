@@ -2,11 +2,11 @@
 
 LATESTNBR=5
 
-function get_latest_posts {
+get_latest_posts() {
 	 find_posts | head -n $LATESTNBR
 }
 
-function display_latest_posts {
+display_latest_posts() {
 	echo "			<h3>Latest posts</h3>"
 	echo "			<ul id="latest-posts">"
 	for article in $(get_latest_posts); do # we use $article from main functions

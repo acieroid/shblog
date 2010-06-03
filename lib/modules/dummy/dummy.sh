@@ -2,6 +2,6 @@
 
 # Module example
 
-function display_dummy_whatever {
+display_dummy_whatever() {
 	echo "Hello world."
 }

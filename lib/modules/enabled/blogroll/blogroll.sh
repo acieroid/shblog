@@ -4,11 +4,11 @@ BLOGROLLFILE=$MODDIR/enabled/blogroll/bloglist
 IFS='
 '
 
-function get_blogroll {
+get_blogroll() {
 	cat $BLOGROLLFILE
 }
 
-function display_blogroll {
+display_blogroll() {
 	echo "			<h3>Blogroll</h3>"
 	echo "			<ul id="blogroll">"
 	for blogline in $(get_blogroll); do

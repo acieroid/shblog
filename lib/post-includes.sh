@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # bin/post.sh uses that
-function get_post_id {
+get_post_id() {
 	if [ "`find $DATADIR/ -name '*.shpost'`" == "" ]
 	then
 		export POSTID=1

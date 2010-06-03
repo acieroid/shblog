@@ -3,7 +3,7 @@
 disqussite=shblogexample
 
 # define function
-function display_comments {
+display_comments() {
 echo "<div id="disqus_thread"></div>
 <script type=\"text/javascript\">
   /**

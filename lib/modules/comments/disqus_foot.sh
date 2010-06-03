@@ -1,7 +1,7 @@
 disqussite=shblogexample
 
 # comments count script
-function comments_foot {
+comments_foot() {
 	echo "<script type=\"text/javascript\">
 	//<![CDATA[
 	(function() {

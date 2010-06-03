@@ -4,11 +4,11 @@
 
 year="$1"
 
-function get_article_link {
+get_article_link() {
 	echo "$BLOGURL/$article" | sed s_"$STATICDIR/"__
 }
 
-function get_article_title {
+get_article_title() {
 	get_article_link | sed s_"$BLOGURL/"__ | cut -d/ -f4
 }
 
