@@ -2,6 +2,7 @@
 
 # Where is shblog installed?
 export BASEDIR=$HOME/shblog
+export SHBLOG=$(echo `pwd`/shblog)
 
 # Localization
 export TEXTDOMAINDIR=$BASEDIR/lib/locale

@@ -21,5 +21,5 @@ while [ "$EDIT" != "y" -a "$EDIT" != "n" ]; do
 done
 
 # Generate static pages
-$BASEDIR/shblog gen single $POSTID
-$BASEDIR/shblog gen index
+$SHBLOG gen single $POSTID
+$SHBLOG gen index
