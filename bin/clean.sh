@@ -2,4 +2,5 @@
 
 . $BASEDIR/lib/includes.sh
 
-rm -rf $STATICDIR/2010 $STATICDIR/index*.html $STATICDIR/rss.xml $TIMESTAMPSDB
+find $STATICDIR -type d -name "[0-9][0-9][0-9][0-9]" -exec rm -r {} \;
+rm -rf $STATICDIR/index*.html $STATICDIR/rss.xml $TIMESTAMPSDB
