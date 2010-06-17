@@ -96,7 +96,7 @@ get_www_link() {
 	echo $BLOGURL/`get_post_html_path`
 }
 
-# And another one, maybe index needed ?
+# And another one (FIXME)
 get_tag_link() {
 	echo $BLOGURL/tag/$tag
 }

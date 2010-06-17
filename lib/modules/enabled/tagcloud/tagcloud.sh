@@ -1,12 +1,6 @@
 #!/bin/sh
 
-LATESTNBR=5
-
-get_latest_posts() {
-	 find_posts | head -n $LATESTNBR
-}
-
-display_tags() {
+display_tagcloud() {
 	echo "			<h3>Tags</h3>"
 	echo "			<ul id="tags">"
 	for article in $(find_posts); do # we use $article from main functions
