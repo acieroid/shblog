@@ -96,6 +96,11 @@ get_www_link() {
 	echo $BLOGURL/`get_post_html_path`
 }
 
+# And another one, maybe index needed ?
+get_tag_link() {
+	echo $BLOGURL/tag/$tag
+}
+
 # Generates HTML post
 gen_post_html() {
 	mkdir -p $STATICDIR/`dirname $article | sed s_"$DATADIR/"__`
