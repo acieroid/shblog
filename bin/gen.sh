@@ -66,6 +66,8 @@ case "$2" in
 	single)
 		get_article_by_id $POSTID
 		gen_post_html
+		#we should only regenerate the current tags
+		$SHBLOG gen tags
 		;;
 	archives)
 		archivesyears=`find_posts_html | sed s_"$STATICDIR/"__ | cut -d/ -f1`
@@ -78,8 +80,8 @@ case "$2" in
 		for POSTID in `find_posts_id`; do
 			get_article_by_id $POSTID
 			gen_post_html
-			$SHBLOG gen tags
 			$SHBLOG gen index
+			$SHBLOG gen tags
 		done
 		;;
 	*)

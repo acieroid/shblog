@@ -24,7 +24,7 @@ find_tags() {
 	for article in $(find_posts); do
 		tags=${tags}\ $(get_tags)
 	done
-	tags=$(echo $tags | sort | sed -e 's/ /\n/g' | uniq)
+	tags=$(echo $tags | sed -e 's/ /\n/g' | sort | uniq)
 	echo $tags
 }
 
