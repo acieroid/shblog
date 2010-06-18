@@ -19,6 +19,15 @@ find_posts_html() {
 	find $STATICDIR/*/ -name '*.html' | grep -v "$ARCHIVESDIR/" | sort -t '/' -k $IDPOSITION -nr
 }
 
+# Find all tags in the blog
+find_tags() {
+	for article in $(find_posts); do
+		tags=${tags}\ $(get_tags)
+	done
+	tags=$(echo $tags | sort | sed -e 's/ /\n/g' | uniq)
+	echo $tags
+}
+
 # Works out post title
 get_title() {
 	grep ^title:: $article | sed s/title:://
@@ -98,7 +107,7 @@ get_www_link() {
 
 # And another one (FIXME)
 get_tag_link() {
-	echo $BLOGURL/tag/$tag
+	echo $BLOGURL/tag/$tag-1.html
 }
 
 # Generates HTML post
