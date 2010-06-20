@@ -32,6 +32,7 @@ case "$2" in
 		$BINDIR/index.sh $pagenum latest > $STATICDIR/index$pagesuffix.html
 		;;
 	tags)
+		[ -d $STATICDIR/tag ] || mkdir $STATICDIR/tag
 		tags=$(find_tags | sed -e 's/ /\n/g')
 		for tag in $tags; do 
 			tmp=""
