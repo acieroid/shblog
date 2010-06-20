@@ -19,6 +19,7 @@ let IDPOSITION=$DATAPOSITION+4
 # Settings
 . $LIBDIR/gettext.sh # Localization
 . $CONFDIR/shblog.conf # User preferences
+. $CONFDIR/upload.conf # Upload settings
 export LANG=$BLOGLANG
 
 # Functions
