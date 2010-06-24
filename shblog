@@ -1,7 +1,16 @@
 #/bin/sh
 
-# Where is shblog installed?
-export BASEDIR=$HOME/shblog
+# Including configuration
+if [ ! -e $HOME/.config/shblog/shblog.conf ]; then
+	echo "Configuration file not found in $HOME/.config/shblog/."
+	echo "You should run the following command:"
+	echo "cp -r /etc/shblog $HOME/.config/"
+	exit 1
+else
+	. $HOME/.config/shblog/shblog.conf
+fi
+
+# Define $0
 export SHBLOG=$(case $0 in /*) echo "$0";; *) echo "`pwd`/$0";; esac)
 
 # Localization

@@ -118,9 +118,8 @@ gen_post_html() {
 
 # Enable modules
 mod_enable() {
-	for module in $MODDIR/enabled/*; do
-		modname=`basename $module`
-		test -f "$module/$modname.sh" || continue
-		. $module/$modname.sh
-	done
+	while read module; do
+		test -f "$MODDIR/$module/$module.sh" || continue
+		. $MODDIR/$module/$module.sh
+	done < $CONFDIR/modules.conf
 }

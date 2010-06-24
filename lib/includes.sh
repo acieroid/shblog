@@ -3,8 +3,7 @@
 # You shouldn't modify that
 BINDIR=$BASEDIR/bin
 LIBDIR=$BASEDIR/lib
-CONFDIR=$BASEDIR/conf
-DATADIR=$BASEDIR/data
+CONFDIR=$HOME/.config/shblog
 STATICDIR=$BASEDIR/static
 ARCHIVESDIR=$STATICDIR/archives
 THEMESDIR=$STATICDIR/themes

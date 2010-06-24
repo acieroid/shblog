@@ -7,16 +7,31 @@ shblog is distributed under the terms of the GPL v3.
 INSTALLATION
 ------------
 
-As of today, the proper way to install shblog is to export its $BASEDIR into
-your $PATH.
-
 $ git clone git://github.com/addikt1ve/shblog.git
-$ export PATH=$HOME/shblog:$PATH
 
-Call shblog gen to create a static/index.html file; thus you just have to do
+* shblog (sh script) should go to /usr/bin/
+* data/ should go in /var/spool/shblog/$USER/
+* static/ should go in /var/cache/shblog/$USER/
+* lib/ should be copied as /usr/lib/shblog
+* conf/ should be copied as /etc/shblog
+
+Call shblog gen to generate HTML files; thus you just have to create a symlink:
+
 $ ln -s $BASEDIR/static /var/www/shblog
+
 and your blog should be available at http://localhost/shblog/
-Basically, all you need to edit is BASEDIR in /shblog and conf/shblog.conf.
+
+CONFIGURATION
+-------------
+
+In order to run shblog, its configuration has to be copied to $HOME/.config.
+Make sure that $HOME/.config directory already exists!
+
+$ cp -r /etc/shblog $HOME/.config/
+
+Basically, all you need to edit is in $CONFDIR/shblog.conf.
+If you wish to use the upload function, please edit $CONFDIR/upload.conf.
+Enabled modules are listed in $CONFDIR/modules.conf.
 
 BASIC USAGE
 -----------
