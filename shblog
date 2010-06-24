@@ -1,6 +1,6 @@
 #/bin/sh
 
-# Including configuration
+# Include configuration
 if [ ! -e $HOME/.config/shblog/shblog.conf ]; then
 	echo "Configuration file not found in $HOME/.config/shblog/."
 	echo "You should run the following command:"
@@ -9,6 +9,10 @@ if [ ! -e $HOME/.config/shblog/shblog.conf ]; then
 else
 	. $HOME/.config/shblog/shblog.conf
 fi
+
+# Check directories
+[ -e $DATADIR ] || mkdir -p $DATADIR
+[ -e $STATICDIR ] || mkdir -p $STATICDIR
 
 # Define $0
 export SHBLOG=$(case $0 in /*) echo "$0";; *) echo "`pwd`/$0";; esac)
