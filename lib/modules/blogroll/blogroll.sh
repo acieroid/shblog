@@ -1,6 +1,9 @@
 #!/bin/sh
 
-BLOGROLLFILE=$MODDIR/enabled/blogroll/bloglist
+BLOGROLLFILE=$CONFDIR/blogroll
+
+[ -e $BLOGROLLFILE ] || cp $MODDIR/blogroll/blogroll $BLOGROLLFILE
+
 IFS='
 '
 

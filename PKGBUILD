@@ -1,16 +1,15 @@
-# Maintainer: addikt1ve <>
+# Maintainer: addikt1ve <the.addikt1ve@gmail.com>
 # Contributor : sigma <sigma_github@melix.net>
 
 pkgname=shblog-git
 pkgver=20100624
 pkgrel=1
 pkgdesc="sh-written blog engine generating static HTML pages"
-arch=('any')
+arch=('i686' 'x86_64')
 url="http://github.com/addikt1ve/shblog"
 license=('GPL')
 depends=('coreutils')
 makedepends=('git')
-#optdepends=()
 provides=('shblog')
 conflicts=('shblog')
 backup=('/etc/shblog/shblog.conf')
