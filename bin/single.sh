@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
+. $LIBDIR/includes.sh
 
 POSTTITLE="$1"
 POSTTAGS="$2"

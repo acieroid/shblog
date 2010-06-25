@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
+. $LIBDIR/includes.sh
 
 # Update timestamps database
 for article in `find_posts`; do

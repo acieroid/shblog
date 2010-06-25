@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
+. $LIBDIR/includes.sh
 
 # Methods
 case "$2" in

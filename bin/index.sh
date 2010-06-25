@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
+. $LIBDIR/includes.sh
 
 # Define page number
 pagenum="$1"

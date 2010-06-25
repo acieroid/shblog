@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
+. $LIBDIR/includes.sh
 
 # Let's be clear about that
 POSTID="$3"

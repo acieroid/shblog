@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $BASEDIR/lib/includes.sh
+. $LIBDIR/includes.sh
 
 # Post
 [ -e $TODAYDIR ] || mkdir -p $TODAYDIR
