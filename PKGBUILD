@@ -2,7 +2,7 @@
 # Contributor : sigma <sigma_github@melix.net>
 
 pkgname=shblog-git
-pkgver=20100624
+pkgver=20100625
 pkgrel=1
 pkgdesc="sh-written blog engine generating static HTML pages"
 arch=('i686' 'x86_64')
@@ -36,5 +36,5 @@ build () {
 }
 
 package() {
-  $srcdir/$_gitname-build/archlinux-install.sh || return 1
+  $srcdir/$_gitname-build/install.sh || return 1
 }
