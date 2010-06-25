@@ -51,7 +51,7 @@ $INSTALL -m755 lib/modules/comments/disqus_content.sh $1/$LIBDIR/modules/comment
 $INSTALL -m755 lib/modules/comments/disqus_foot.sh $1/$LIBDIR/modules/comments
 $INSTALL -m644 lib/modules/markdown/readme $1/$LIBDIR/modules/markdown
 $INSTALL -m644 lib/modules/markdown/md2html.awk $1/$LIBDIR/modules/markdown
-$INSTALL -m755 lib/modules/rss/rss_head.sh $1/$LIBDIR/modules
+$INSTALL -m755 lib/modules/rss/rss_head.sh $1/$LIBDIR/modules/rss
 
 $INSTALL -d $1/$BINDIR
 $INSTALL -m755 shblog $1/$BINDIR
