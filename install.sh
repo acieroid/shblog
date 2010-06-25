@@ -8,17 +8,17 @@ LIBDIR="/usr/lib/shblog"
 DATADIR="/var/spool/shblog"
 STATICDIR="/var/cache/shblog"
 
-$INSTALL -d $1/$BASEDIR
-$INSTALL -d $1/$BASEDIR/archives
-$INSTALL -m755 bin/archives/year.sh $1/$BASEDIR/archives
-$INSTALL -m755 bin/clean.sh $1/$BASEDIR
-$INSTALL -m755 bin/gen.sh $1/$BASEDIR
-$INSTALL -m755 bin/index.sh $1/$BASEDIR
-$INSTALL -m755 bin/post.sh $1/$BASEDIR
-$INSTALL -m755 bin/sidebar.sh $1/$BASEDIR
-$INSTALL -m755 bin/single.sh $1/$BASEDIR
-$INSTALL -m755 bin/update.sh $1/$BASEDIR
-$INSTALL -m755 bin/upload.sh $1/$BASEDIR
+$INSTALL -d $1/$BASEDIR/bin
+$INSTALL -d $1/$BASEDIR/bin/archives
+$INSTALL -m755 bin/archives/year.sh $1/$BASEDIR/bin/archives
+$INSTALL -m755 bin/clean.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/gen.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/index.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/post.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/sidebar.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/single.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/update.sh $1/$BASEDIR/bin
+$INSTALL -m755 bin/upload.sh $1/$BASEDIR/bin
 
 $INSTALL -d $1/$CONFDIR
 $INSTALL -m644 conf/modules.conf $1/$CONFDIR
@@ -53,7 +53,8 @@ $INSTALL -m644 lib/modules/markdown/readme $1/$LIBDIR/modules/markdown
 $INSTALL -m644 lib/modules/markdown/md2html.awk $1/$LIBDIR/modules/markdown
 $INSTALL -m755 lib/modules/rss/rss_head.sh $1/$LIBDIR/modules
 
-$INSTALL -m755 shblog $1/$BINDIR/shblog
+$INSTALL -d $1/$BINDIR
+$INSTALL -m755 shblog $1/$BINDIR
 
 $INSTALL -d -m775 $1/$STATICDIR
 chmod o+t $1/$STATICDIR
