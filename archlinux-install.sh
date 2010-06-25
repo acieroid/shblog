@@ -8,56 +8,56 @@ LIBDIR="/usr/lib/shblog"
 DATADIR="/var/spool/shblog"
 STATICDIR="/var/cache/shblog"
 
-$INSTALL -d ${pkgdir}/$BASEDIR
-$INSTALL -d ${pkgdir}/$BASEDIR/archives
-$INSTALL -m755 bin/archives/year.sh ${pkgdir}/$BASEDIR/archives
-$INSTALL -m755 bin/clean.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/gen.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/index.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/post.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/sidebar.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/single.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/update.sh ${pkgdir}/$BASEDIR
-$INSTALL -m755 bin/upload.sh ${pkgdir}/$BASEDIR
+$INSTALL -d $1/$BASEDIR
+$INSTALL -d $1/$BASEDIR/archives
+$INSTALL -m755 bin/archives/year.sh $1/$BASEDIR/archives
+$INSTALL -m755 bin/clean.sh $1/$BASEDIR
+$INSTALL -m755 bin/gen.sh $1/$BASEDIR
+$INSTALL -m755 bin/index.sh $1/$BASEDIR
+$INSTALL -m755 bin/post.sh $1/$BASEDIR
+$INSTALL -m755 bin/sidebar.sh $1/$BASEDIR
+$INSTALL -m755 bin/single.sh $1/$BASEDIR
+$INSTALL -m755 bin/update.sh $1/$BASEDIR
+$INSTALL -m755 bin/upload.sh $1/$BASEDIR
 
-$INSTALL -d ${pkgdir}/$CONFDIR
-$INSTALL -m644 conf/modules.conf ${pkgdir}/$CONFDIR
-$INSTALL -m644 conf/shblog.conf ${pkgdir}/$CONFDIR
-$INSTALL -m644 conf/upload.conf ${pkgdir}/$CONFDIR
+$INSTALL -d $1/$CONFDIR
+$INSTALL -m644 conf/modules.conf $1/$CONFDIR
+$INSTALL -m644 conf/shblog.conf $1/$CONFDIR
+$INSTALL -m644 conf/upload.conf $1/$CONFDIR
 
 # i'd rather put data/1-first-post.shpost, and then install it in the current day
-$INSTALL -d -m775 ${pkgdir}/$DATADIR
-chmod o+t ${pkgdir}/$DATADIR
-$INSTALL -d ${pkgdir}/$BASEDIR/data
-$INSTALL -m644 data/2010/05/27/1-first-post.shpost ${pkgdir}/$BASEDIR/data
+$INSTALL -d -m775 $1/$DATADIR
+chmod o+t $1/$DATADIR
+$INSTALL -d $1/$BASEDIR/data
+$INSTALL -m644 data/2010/05/27/1-first-post.shpost $1/$BASEDIR/data
 
-$INSTALL -d ${pkgdir}/$LIBDIR
-$INSTALL -m644 lib/0.default ${pkgdir}/$LIBDIR
-$INSTALL -m755 lib/functions.sh ${pkgdir}/$LIBDIR
-$INSTALL -m755 lib/gettext.sh ${pkgdir}/$LIBDIR
-$INSTALL -m755 lib/includes.sh ${pkgdir}/$LIBDIR
-$INSTALL -m755 lib/post-includes.sh ${pkgdir}/$LIBDIR
-$INSTALL -m755 lib/settings.sh ${pkgdir}/$LIBDIR
-$INSTALL -d ${pkgdir}/$LIBDIR/locale/fr/LC_MESSAGES
-$INSTALL -m644 lib/locale/fr/LC_MESSAGES/shblog.mo ${pkgdir}/$LIBDIR/locale/fr/LC_MESSAGES
-$INSTALL -d ${pkgdir}/$LIBDIR/modules
+$INSTALL -d $1/$LIBDIR
+$INSTALL -m644 lib/0.default $1/$LIBDIR
+$INSTALL -m755 lib/functions.sh $1/$LIBDIR
+$INSTALL -m755 lib/gettext.sh $1/$LIBDIR
+$INSTALL -m755 lib/includes.sh $1/$LIBDIR
+$INSTALL -m755 lib/post-includes.sh $1/$LIBDIR
+$INSTALL -m755 lib/settings.sh $1/$LIBDIR
+$INSTALL -d $1/$LIBDIR/locale/fr/LC_MESSAGES
+$INSTALL -m644 lib/locale/fr/LC_MESSAGES/shblog.mo $1/$LIBDIR/locale/fr/LC_MESSAGES
+$INSTALL -d $1/$LIBDIR/modules
 for i in "blogroll" "content" "dummy" "foot" "head" "latest" "markdown" "rss" "tagcloud"; do
-    $INSTALL -d ${pkgdir}/$LIBDIR/modules/$i
-    $INSTALL -m755 lib/modules/$i/$i.sh ${pkgdir}/$LIBDIR/modules/$i/$i.sh
+    $INSTALL -d $1/$LIBDIR/modules/$i
+    $INSTALL -m755 lib/modules/$i/$i.sh $1/$LIBDIR/modules/$i/$i.sh
 done
-$INSTALL -m644 lib/modules/blogroll/blogroll ${pkgdir}/$LIBDIR/modules/blogroll/blogroll
-$INSTALL -d ${pkgdir}/$LIBDIR/modules/comments
-$INSTALL -m755 lib/modules/comments/disqus_content.sh ${pkgdir}/$LIBDIR/modules/comments
-$INSTALL -m755 lib/modules/comments/disqus_foot.sh ${pkgdir}/$LIBDIR/modules/comments
-$INSTALL -m644 lib/modules/markdown/readme ${pkgdir}/$LIBDIR/modules/markdown
-$INSTALL -m644 lib/modules/markdown/md2html.awk ${pkgdir}/$LIBDIR/modules/markdown
-$INSTALL -m755 lib/modules/rss/rss_head.sh ${pkgdir}/$LIBDIR/modules
+$INSTALL -m644 lib/modules/blogroll/blogroll $1/$LIBDIR/modules/blogroll/blogroll
+$INSTALL -d $1/$LIBDIR/modules/comments
+$INSTALL -m755 lib/modules/comments/disqus_content.sh $1/$LIBDIR/modules/comments
+$INSTALL -m755 lib/modules/comments/disqus_foot.sh $1/$LIBDIR/modules/comments
+$INSTALL -m644 lib/modules/markdown/readme $1/$LIBDIR/modules/markdown
+$INSTALL -m644 lib/modules/markdown/md2html.awk $1/$LIBDIR/modules/markdown
+$INSTALL -m755 lib/modules/rss/rss_head.sh $1/$LIBDIR/modules
 
-$INSTALL -m755 shblog ${pkgdir}/$BINDIR
+$INSTALL -m755 shblog $1/$BINDIR
 
-$INSTALL -d -m775 ${pkgdir}/$STATICDIR
-chmod o+t ${pkgdir}/$STATICDIR
+$INSTALL -d -m775 $1/$STATICDIR
+chmod o+t $1/$STATICDIR
 for i in "dark" "default"; do
-    $INSTALL -d ${pkgdir}/$BASEDIR/static
-    $INSTALL -m644 static/themes/$i/style.css ${pkgdir}/$BASEDIR/static/themes/$i
+    $INSTALL -d $1/$BASEDIR/static
+    $INSTALL -m644 static/themes/$i/style.css $1/$BASEDIR/static/themes/$i
 done
