@@ -36,5 +36,6 @@ build () {
 }
 
 package() {
-  $srcdir/$_gitname-build/install.sh || return 1
+	cd $srcdir/$_gitname-build
+  $srcdir/$_gitname-build/install.sh $pkgdir || return 1
 }

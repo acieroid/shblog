@@ -53,7 +53,7 @@ $INSTALL -m644 lib/modules/markdown/readme $1/$LIBDIR/modules/markdown
 $INSTALL -m644 lib/modules/markdown/md2html.awk $1/$LIBDIR/modules/markdown
 $INSTALL -m755 lib/modules/rss/rss_head.sh $1/$LIBDIR/modules
 
-$INSTALL -m755 shblog $1/$BINDIR
+$INSTALL -m755 shblog $1/$BINDIR/shblog
 
 $INSTALL -d -m775 $1/$STATICDIR
 chmod o+t $1/$STATICDIR
