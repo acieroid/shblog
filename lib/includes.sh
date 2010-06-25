@@ -24,5 +24,5 @@ export LANG=$BLOGLANG
 . $LIBDIR/functions.sh
 . $LIBDIR/post-includes.sh
 
-# Enable modules in $MODDIR/enabled
+# Enable modules listed in ~/.config/modules.conf
 mod_enable
