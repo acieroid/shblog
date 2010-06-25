@@ -58,6 +58,6 @@ $INSTALL -m755 shblog $1/$BINDIR
 $INSTALL -d -m775 $1/$STATICDIR
 chmod o+t $1/$STATICDIR
 for i in "dark" "default"; do
-    $INSTALL -d $1/$BASEDIR/static/themes
+    $INSTALL -d $1/$BASEDIR/static/themes/$i
     $INSTALL -m644 static/themes/$i/style.css $1/$BASEDIR/static/themes/$i
 done
