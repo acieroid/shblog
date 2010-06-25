@@ -26,7 +26,7 @@ $INSTALL -m644 conf/shblog.conf $1/$CONFDIR
 $INSTALL -m644 conf/upload.conf $1/$CONFDIR
 
 # i'd rather put data/1-first-post.shpost, and then install it in the current day
-$INSTALL -d -m775 $1/$DATADIR
+$INSTALL -d -m777 $1/$DATADIR
 chmod o+t $1/$DATADIR
 $INSTALL -d $1/$BASEDIR/data
 $INSTALL -m644 data/2010/05/27/1-first-post.shpost $1/$BASEDIR/data
@@ -56,7 +56,7 @@ $INSTALL -m755 lib/modules/rss/rss_head.sh $1/$LIBDIR/modules
 $INSTALL -d $1/$BINDIR
 $INSTALL -m755 shblog $1/$BINDIR
 
-$INSTALL -d -m775 $1/$STATICDIR
+$INSTALL -d -m777 $1/$STATICDIR
 chmod o+t $1/$STATICDIR
 for i in "dark" "default"; do
     $INSTALL -d $1/$BASEDIR/static/themes/$i
