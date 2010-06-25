@@ -36,5 +36,5 @@ build () {
 }
 
 package() {
-  $srcdir/$_gitname-build/install.sh || return 1
+  $srcdir/$_gitname-build/archlinux-install.sh || return 1
 }
