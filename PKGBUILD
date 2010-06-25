@@ -12,7 +12,7 @@ depends=('coreutils')
 makedepends=('git')
 provides=('shblog')
 conflicts=('shblog')
-backup=('/etc/shblog/shblog.conf')
+#backup=('/etc/shblog/shblog.conf')
 
 _gitroot=http://github.com/addikt1ve/shblog.git
 _gitname=shblog
@@ -20,14 +20,19 @@ _gitname=shblog
 build () {
   cd "$srcdir"
 
-  if [[ -d $_gitmane ]]; then
+	msg "Connecting to GIT server..."
+  if [[ -d $_gitname ]]; then
     cd $_gitname && git pull origin && cd .. || return 1
   else
-    git clone $_gitroot || return 1
+    git clone $_gitroot $_gitname || return 1
   fi
 
-  rm -fr $_gitname-build
-  git clone $_gitname $_guitname-build || return 1
+	msg "GIT checkout done or server timeout"
+	msg "Starting make..."
+
+  rm -rf $_gitname-build
+	cp -r $_gitname $_gitname-build
+	cd $_gitname-build
 }
 
 package() {
