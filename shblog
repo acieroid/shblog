@@ -16,6 +16,8 @@ fi
 
 # Define $0
 export SHBLOG=$(case $0 in /*) echo "$0";; *) echo "`pwd`/$0";; esac)
+# Export $LIBDIR
+export LIBDIR=/usr/lib/shblog
 
 # Localization
 export TEXTDOMAINDIR=$BASEDIR/lib/locale
