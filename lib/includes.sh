@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Settings
+. $LIBDIR/gettext.sh # Localization
+. $CONFDIR/shblog.conf # User preferences
+. $CONFDIR/upload.conf # Upload settings
+export LANG=$BLOGLANG
+
 # You shouldn't modify that
 BINDIR=$BASEDIR/bin
 CONFDIR=$HOME/.config/shblog
@@ -13,11 +19,6 @@ TIMESTAMPSDB=$DATADIR/timestamps.db
 DATAPOSITION=`echo $DATADIR | tr '/' '\n' | wc -l`
 let IDPOSITION=$DATAPOSITION+4 > /dev/null
 
-# Settings
-. $LIBDIR/gettext.sh # Localization
-. $CONFDIR/shblog.conf # User preferences
-. $CONFDIR/upload.conf # Upload settings
-export LANG=$BLOGLANG
 
 # Functions
 . $LIBDIR/functions.sh
