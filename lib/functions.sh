@@ -40,7 +40,10 @@ get_timestamp() {
 
 # Works out post date using its timestamp
 get_date() {
-	date -d "@`get_timestamp`" $1
+	case $(uname -s) in
+		Linux) date -d "@`get_timestamp`" $1
+		*BSD) date -r `get_timestamp` $1
+	esac
 }
 
 # Works out last modification timestamp of a file
