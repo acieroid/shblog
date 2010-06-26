@@ -43,6 +43,14 @@ get_date() {
 	date -d "@`get_timestamp`" $1
 }
 
+# Works out last modification timestamp of a file
+get_last_modif_timestamp() {
+	case $(uname -s) in
+		Linux) date -r $1 '+%s';;
+		*BSD) stat -f "%m" $1;;
+	esac
+}
+
 # Works out post tags
 get_tags() {
 	grep ^tags:: $article | sed s/tags:://

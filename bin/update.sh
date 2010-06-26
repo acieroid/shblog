@@ -4,7 +4,7 @@
 
 # Update timestamps database
 for article in `find_posts`; do
-	echo "$article `date -r $article '+%s'`" >> $TIMESTAMPSDB.new
+	echo "$article `get_last_modif_timestamp $article'`" >> $TIMESTAMPSDB.new
 done
 
 # List modified files
