@@ -1,17 +1,18 @@
 #!/bin/sh
 
-# Settings
-. $LIBDIR/gettext.sh # Localization
-. $CONFDIR/shblog.conf # User preferences
-. $CONFDIR/upload.conf # Upload settings
-export LANG=$BLOGLANG
-
 # You shouldn't modify that
 BINDIR=$BASEDIR/bin
 CONFDIR=$HOME/.config/shblog
 ARCHIVESDIR=$STATICDIR/archives
 THEMESDIR=$STATICDIR/themes
 MODDIR=$LIBDIR/modules
+
+# Settings
+. $LIBDIR/gettext.sh # Localization
+. $CONFDIR/shblog.conf # User preferences
+. $CONFDIR/upload.conf # Upload settings
+export LANG=$BLOGLANG
+
 # You shouldn't modify that either
 TIMESTAMPSDB=$DATADIR/timestamps.db
 
