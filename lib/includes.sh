@@ -11,7 +11,7 @@ TIMESTAMPSDB=$DATADIR/timestamps.db
 
 # Black magic crap that does the job
 DATAPOSITION=`echo $DATADIR | tr '/' '\n' | wc -l`
-let IDPOSITION=$DATAPOSITION+4
+let IDPOSITION=$DATAPOSITION+4 > /dev/null
 
 # Settings
 . $LIBDIR/gettext.sh # Localization
