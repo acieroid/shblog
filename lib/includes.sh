@@ -2,7 +2,6 @@
 
 # You shouldn't modify that
 BINDIR=$BASEDIR/bin
-LIBDIR=/usr/lib/shblog
 CONFDIR=$HOME/.config/shblog
 ARCHIVESDIR=$STATICDIR/archives
 THEMESDIR=$STATICDIR/themes
