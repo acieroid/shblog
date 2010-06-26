@@ -41,8 +41,8 @@ get_timestamp() {
 # Works out post date using its timestamp
 get_date() {
 	case $(uname -s) in
-		Linux) date -d "@`get_timestamp`" $1
-		*BSD) date -r `get_timestamp` $1
+		Linux) date -d "@`get_timestamp`" $1;;
+		*BSD) date -r `get_timestamp` $1;;
 	esac
 }
 
