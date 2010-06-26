@@ -64,13 +64,16 @@ get_tags_tab() {
 	x=1
 	y=1
 	nbr=`get_tags | wc -w`
+	acc=""
 	while [ "$y" -le "$nbr" ]; do
 		tag=`get_tags | cut -d' ' -f $x`
-		tab[$x]=$tag
+		echo -n $tag
+		if [ "$y" -le "$nbr" ]; then
+			echo ", "
+		fi
 		x=$(($x+1))
 		y="$x"
 	done
-	echo ${tab[*]} | sed s/" "/", "/g 
 }
 
 # Works out post author

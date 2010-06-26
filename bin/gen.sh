@@ -14,7 +14,7 @@ case "$2" in
 		pagesuffix=""
 		# work it out
 		while [ "$postspos" -lt "$(($postsnbr-$INDEXPOSTS))" ]; do
-			export tmplist=`find_posts | head -n $(($postspos+$INDEXPOSTS)) | tail -n $INDEXPOSTS`
+			export tmplist="`find_posts | head -n $(($postspos+$INDEXPOSTS)) | tail -n $INDEXPOSTS`"
 			if [ "$pagenum" -gt 1 ]; then
 				pagesuffix="-$pagenum"
 			fi
@@ -25,7 +25,7 @@ case "$2" in
 			pagenum=$(($pagenum+1))
 		done
 		# generate last page!
-		export tmplist=`find_posts | tail -n $(($postsnbr-$postspos))`
+		export tmplist="`find_posts | tail -n $(($postsnbr-$postspos))`"
 		if [ "$pagenum" -gt "1" ]; then
 			export pagesuffix="-$pagenum"
 		fi
@@ -48,7 +48,7 @@ case "$2" in
 			pagesuffix=""
 			# work it out
 			while [ "$postspos" -lt "$(($postsnbr-$INDEXPOSTS))" ]; do
-				export tmplist=`echo $tmp | sed -e 's/ /\n/g' | head -n $(($postspos+$INDEXPOSTS)) | tail -n $INDEXPOSTS`
+				export tmplist="`echo $tmp | sed -e 's/ /\n/g' | head -n $(($postspos+$INDEXPOSTS)) | tail -n $INDEXPOSTS`"
 				if [ "$pagenum" -gt 1 ]; then
 					pagesuffix="-$pagenum"
 				fi
@@ -59,7 +59,7 @@ case "$2" in
 				pagenum=$(($pagenum+1))
 			done
 			# generate last page!
-			export tmplist=`echo $tmp | sed -e 's/ /\n/g' | tail -n $(($postsnbr-$postspos))`
+			export tmplist="`echo $tmp | sed -e 's/ /\n/g' | tail -n $(($postsnbr-$postspos))`"
 			export pagesuffix="-$pagenum"
 			$BINDIR/index.sh $pagenum latest > $STATICDIR/tag/$tag$pagesuffix.html
 		done
