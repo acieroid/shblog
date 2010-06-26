@@ -38,7 +38,7 @@ case "$2" in
 			tmp=""
 			for article in $(find_posts); do
 				is_good_tag=$(echo $(get_tags) | grep -v $tag)
-				if [ "$is_good_tag" == "" ]; then
+				if [ "$is_good_tag" = "" ]; then
 					tmp=$tmp\ $article
 				fi
 			done
